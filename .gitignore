@@ -1,0 +1,31 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# pipeline output (downloaded videos, frames, reports)
+out/
+*.mp4
+*.webm
+*.mkv
+*.part
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# model caches
+.cache/
+*.onnx
+
+# editors / os
+.vscode/
+.idea/
+.DS_Store

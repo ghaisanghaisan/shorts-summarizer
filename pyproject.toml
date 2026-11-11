@@ -1,0 +1,29 @@
+[project]
+name = "shorts-summarizer"
+version = "0.1.0"
+description = "Watch TikTok/IG Reels with AI: frames, OCR, transcript, propaganda + sentiment signals"
+readme = "README.md"
+authors = [
+    { name = "ghaisanghaisan", email = "danishghaisan.putraahmadi@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=2.8.0",
+    "faster-whisper>=1.2.1",
+    "google-genai>=3.1.0",
+    "imagehash>=4.3.2",
+    "opencv-python-headless>=5.0.0.93",
+    "pillow>=13.0.0",
+    "pydantic>=2.14.3",
+    "python-dotenv>=1.2.4",
+    "rapidocr-onnxruntime>=1.4.4",
+    "typer>=0.29.0",
+    "yt-dlp>=2026.10.26",
+]
+
+[project.scripts]
+shorts = "shorts_summarizer.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
