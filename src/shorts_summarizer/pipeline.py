@@ -10,7 +10,7 @@ from pydantic import BaseModel, TypeAdapter
 from . import fetch, frames, transcribe
 from .analyzers import Evidence, get_analyzer
 from .describe import merge_text, merge_visuals
-from .schema import (Analysis, Meta, OcrLine, SelectedFrame, TranscriptSegment,
+from .schema import (Analysis, Meta, OcrLine, SelectedFrame, SentimentVerdict, TranscriptSegment,
                      VideoReport, VisualPass)
 
 T = TypeVar("T")
@@ -38,15 +38,17 @@ def _cached(path: Path, typ, compute: Callable[[], T], force: bool = False) -> T
 
 def run(url: str, out_root: Path = Path("out"), cookies_from_browser: str | None = None,
         analyzer: str = "claude", model: str | None = None, budget: int | None = None,
-        reanalyze: bool = False, log: Callable[[str], None] = print) -> VideoReport:
+        reanalyze: bool = False, lang: str = "id", log: Callable[[str], None] = print) -> VideoReport:
     info = fetch.probe(url, cookies_from_browser)
     key = fetch.video_key(info, url)
     wd = out_root / key
     wd.mkdir(parents=True, exist_ok=True)
     report_path = wd / "report.json"
     if report_path.exists() and not reanalyze:
-        log(f"[{key}] cached")
-        return VideoReport.model_validate_json(report_path.read_text())
+        cached = VideoReport.model_validate_json(report_path.read_text())
+        if cached.report_language == lang:
+            log(f"[{key}] cached")
+            return cached
 
     def _dl() -> Meta:
         log(f"[{key}] downloading")
@@ -74,19 +76,19 @@ def run(url: str, out_root: Path = Path("out"), cookies_from_browser: str | None
     segs = tx.segments
 
     ev = Evidence(meta=meta, frames=sel, ocr=ocr_lines, transcript=segs, language=tx.language)
-    an = get_analyzer(analyzer, model)
+    an = get_analyzer(analyzer, model, lang)
 
     def _describe() -> VisualPass:
         log(f"[{key}] describing visuals ({an.model})")
         return an.describe(ev)
 
-    vp = _cached(wd / "visuals.json", VisualPass, _describe, force=reanalyze)
+    vp = _cached(wd / f"visuals.{lang}.json", VisualPass, _describe, force=reanalyze)
 
     def _analyze() -> Analysis:
         log(f"[{key}] analyzing")
         return an.analyze(ev, vp)
 
-    a = _cached(wd / "analysis.json", Analysis, _analyze, force=reanalyze)
+    a = _cached(wd / f"analysis.{lang}.json", Analysis, _analyze, force=reanalyze)
 
     visuals = merge_visuals(sel, vp, duration)
     report = VideoReport(
@@ -96,10 +98,27 @@ def run(url: str, out_root: Path = Path("out"), cookies_from_browser: str | None
         transcript=segs, language=tx.language,
         claims=a.claims, sentiment=a.sentiment, propaganda_techniques=a.propaganda_techniques,
         call_to_action=a.call_to_action, target_groups=a.target_groups, risk_flags=a.risk_flags,
-        model=an.model,
+        model=an.model, report_language=lang,
     )
     report_path.write_text(report.model_dump_json(indent=2))
     with (out_root / "reports.jsonl").open("a") as f:
         f.write(report.model_dump_json() + "\n")
     log(f"[{key}] done -> {report_path}")
     return report
+
+
+def sentiment_stage(report_path: Path, mode: str | None = None, force: bool = False,
+                    log: Callable[[str], None] = print) -> SentimentVerdict:
+    """Whole-video sentiment verdict for an existing report.json, cached as sentiment.json."""
+    from . import sentiment
+
+    out = report_path.with_name("sentiment.json")
+    if out.exists() and not force:
+        cached = SentimentVerdict.model_validate_json(out.read_text())
+        if mode is None or cached.mode == mode:
+            return cached
+    report = VideoReport.model_validate_json(report_path.read_text())
+    log(f"[{report.meta.platform}_{report.meta.id}] sentiment ({mode or 'default mode'})")
+    verdict = sentiment.analyze(report, mode=mode)
+    out.write_text(verdict.model_dump_json(indent=2))
+    return verdict

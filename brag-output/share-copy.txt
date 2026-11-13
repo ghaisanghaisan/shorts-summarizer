@@ -1,0 +1,1 @@
+Nobody can watch every viral video, so shorts-summarizer does it for you. Paste a TikTok, Reel or Short: it picks the frames that matter, reads every caption, hears every word, and flags the manipulation with timestamped receipts (reports in Bahasa Indonesia too).

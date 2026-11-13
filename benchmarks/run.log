@@ -1,0 +1,36 @@
+{'smsa': 1260, 'nusax': 400}
+apriandito/indobert-sentiment-classifier                generic  smsa    acc=0.371 mF1=0.385 419ms/item
+apriandito/indobert-sentiment-classifier                review   smsa    acc=0.450 mF1=0.469 501ms/item
+apriandito/indobert-sentiment-classifier                generic  nusax   acc=0.540 mF1=0.461 365ms/item
+apriandito/indobert-sentiment-classifier                review   nusax   acc=0.630 mF1=0.613 388ms/item
+w11wo/indonesian-roberta-base-sentiment-classifier      none     smsa    acc=0.925 mF1=0.892 122ms/item
+w11wo/indonesian-roberta-base-sentiment-classifier      none     nusax   acc=0.907 mF1=0.894 122ms/item
+mdhugol/indonesia-bert-sentiment-classification         none     smsa    acc=0.938 mF1=0.912 134ms/item
+mdhugol/indonesia-bert-sentiment-classification         none     nusax   acc=0.960 mF1=0.955 113ms/item
+  [gemini] 503 UNAVAILABLE, retrying in 5s (1/4)
+  [gemini] 503 UNAVAILABLE, retrying in 10s (2/4)
+  [gemini] 503 UNAVAILABLE, retrying in 20s (3/4)
+  [gemini] 503 UNAVAILABLE, retrying in 40s (4/4)
+gemini smsa: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  [gemini] 503 UNAVAILABLE, retrying in 5s (1/4)
+  [gemini] 503 UNAVAILABLE, retrying in 10s (2/4)
+  [gemini] 503 UNAVAILABLE, retrying in 20s (3/4)
+  [gemini] 503 UNAVAILABLE, retrying in 40s (4/4)
+gemini nusax: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+# Sentiment benchmark
+
+Datasets: smsa (n=1260), nusax (n=400). Subset = the same 200 random items per dataset that Gemini saw (fair comparison).
+`*` = model was fine-tuned on SmSA, so its SmSA score is contaminated.
+
+| model | context | dataset | acc | macro-F1 | F1 neg / neu / pos | subset acc | subset macro-F1 | ms/item |
+|---|---|---|---|---|---|---|---|---|
+| indonesia-bert-sentiment-classification | none | nusax | 0.960 | 0.955 | 0.98 / 0.92 / 0.96 | 0.955 | 0.950 | 112.7 |
+| indonesian-roberta-base-sentiment-classifier | none | nusax | 0.907 | 0.894 | 0.94 / 0.82 / 0.92 | 0.890 | 0.873 | 121.9 |
+| indobert-sentiment-classifier | review | nusax | 0.630 | 0.613 | 0.87 / 0.54 / 0.43 | 0.640 | 0.621 | 388.3 |
+| indobert-sentiment-classifier | generic | nusax | 0.540 | 0.461 | 0.88 / 0.49 / 0.01 | 0.545 | 0.463 | 365.5 |
+| indonesia-bert-sentiment-classification* | none | smsa | 0.938 | 0.912 | 0.92 / 0.85 / 0.96 | 0.935 | 0.920 | 134.1 |
+| indonesian-roberta-base-sentiment-classifier* | none | smsa | 0.925 | 0.892 | 0.91 / 0.81 / 0.95 | 0.930 | 0.906 | 121.7 |
+| indobert-sentiment-classifier | review | smsa | 0.450 | 0.469 | 0.80 / 0.25 / 0.35 | 0.520 | 0.512 | 501.4 |
+| indobert-sentiment-classifier | generic | smsa | 0.371 | 0.385 | 0.86 / 0.22 / 0.07 | 0.450 | 0.418 | 419.3 |
+
+Confusion matrices (rows = gold neg/neu/pos, cols = predicted) and worst errors: `results.json`.

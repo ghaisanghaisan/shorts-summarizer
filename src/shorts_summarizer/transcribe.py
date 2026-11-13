@@ -15,10 +15,14 @@ def _model(name: str):
     return WhisperModel(name, device="auto", compute_type="int8")
 
 
-def transcribe(video: Path, model_name: str | None = None) -> tuple[list[TranscriptSegment], str | None]:
+def transcribe(video: Path, model_name: str | None = None,
+               language: str | None = None) -> tuple[list[TranscriptSegment], str | None]:
+    """`language` (or $WHISPER_LANGUAGE, e.g. "id") skips auto-detection, which can misfire on
+    short clips, music beds or synthetic voices and produce garbage."""
     name = model_name or os.getenv("WHISPER_MODEL", "small")
+    language = language or os.getenv("WHISPER_LANGUAGE") or None
     try:
-        segments, info = _model(name).transcribe(str(video), vad_filter=True)
+        segments, info = _model(name).transcribe(str(video), vad_filter=True, language=language)
         segs = [TranscriptSegment(t_start=round(s.start, 2), t_end=round(s.end, 2), text=s.text.strip())
                 for s in segments if s.text.strip()]
     except Exception as e:  # no audio stream, decode error, etc.

@@ -146,3 +146,31 @@ class VideoReport(BaseModel):
     target_groups: list[str]
     risk_flags: list[str]
     model: str
+    report_language: str = "en"
+
+
+# ---------- sentiment verdict (separate layer, written to sentiment.json) ----------
+
+class SentimentUnit(BaseModel):
+    t: float | None
+    source: Literal["transcript", "ocr", "caption"]
+    text: str
+    weight: float
+    score: float | None = None  # p(pos) - p(neg) from the local model
+    probs: dict[str, float] | None = None
+
+
+class SentimentVerdict(BaseModel):
+    label: Literal["negative", "neutral", "positive"]
+    score: float = Field(description="-1..1, final (ensemble or LLM-only)")
+    mode: Literal["ensemble", "llm"]
+    model: str | None
+    model_score: float | None
+    llm_score: float
+    llm_label: str
+    agree: bool | None
+    needs_review: bool
+    context: str
+    emotions: list[str]
+    arc: list[SentimentSegment]
+    units: list[SentimentUnit]

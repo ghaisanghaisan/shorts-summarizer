@@ -29,3 +29,6 @@ dist/
 .vscode/
 .idea/
 .DS_Store
+
+# /brag launch-video intermediates
+brag-output*/work/

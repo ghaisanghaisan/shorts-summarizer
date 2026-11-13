@@ -1,0 +1,1448 @@
+[
+ {
+  "model": "apriandito/indobert-sentiment-classifier",
+  "context": "generic",
+  "dataset": "smsa",
+  "contaminated": false,
+  "ms_per_item": 419.3,
+  "full": {
+   "n": 1260,
+   "acc": 0.3714,
+   "macro_f1": 0.3853,
+   "f1": {
+    "negative": 0.8594,
+    "neutral": 0.2236,
+    "positive": 0.0729
+   },
+   "confusion": [
+    [
+     330,
+     60,
+     4
+    ],
+    [
+     20,
+     110,
+     1
+    ],
+    [
+     24,
+     683,
+     28
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.45,
+   "macro_f1": 0.4176,
+   "f1": {
+    "negative": 0.8844,
+    "neutral": 0.2759,
+    "positive": 0.0926
+   },
+   "confusion": [
+    [
+     65,
+     8,
+     0
+    ],
+    [
+     4,
+     20,
+     0
+    ],
+    [
+     5,
+     93,
+     5
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 1.0,
+    "text": "tempat nya nyaman . rasanya biasa saja . pelayanan nya sangat lama . makanan keluar pun lama padahal yang makan cuma kit",
+    "gold": "positive",
+    "pred": "negative"
+   },
+   {
+    "conf": 1.0,
+    "text": "tempat makan yang menawarkan pemandangan menarik . buka sampai malam . makanan cukup variatif , mulai aneka steak , maka",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "tidak ada nya bantahan resmi dari demokrat ttg isu jokowi - ahy , banyak menimbulkan kerugian dikubu demokrat . jika ben",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 1.0,
+    "text": "menu bubur untuk sarapan pagi favorit semua orang . porsi cukup , tidak terlalu besar , tidak terlalu sedikit . bubur ay",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "lomie yang awal nya kental kuah nya tetapi setelah diaduk jadi encer . rasanya gurih banget . besok mau balik lagi ke ba",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "pertama kali ke sini , di jogja belum ada soal nya . ini juga karena diet pas lewat jalan braga . banyak pilihan menu ma",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "kebetulan lokasi nya dekat dengan tempat menginap di hotel grand setiabudi bandung karena penasaran ingin coba akhirnya ",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "dekat dengan rumah tinggal saya ketika di bandung , saya sering ke supermarket ini untuk membeli beberapa makanan impor ",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "kalau lapar dekat daerah bis atau bec , ingin makan bubur , coba bubur ayam hamid , rasanya enak pol banget untuk mengis",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "aku sih beli di groupon kupon diskon . jadi bisa diskon lumayan . rasa enak kok . aku makan sop buntut dan lumpia .",
+    "gold": "positive",
+    "pred": "neutral"
+   }
+  ]
+ },
+ {
+  "model": "apriandito/indobert-sentiment-classifier",
+  "context": "review",
+  "dataset": "smsa",
+  "contaminated": false,
+  "ms_per_item": 501.4,
+  "full": {
+   "n": 1260,
+   "acc": 0.45,
+   "macro_f1": 0.469,
+   "f1": {
+    "negative": 0.8048,
+    "neutral": 0.2548,
+    "positive": 0.3474
+   },
+   "confusion": [
+    [
+     299,
+     95,
+     0
+    ],
+    [
+     12,
+     112,
+     7
+    ],
+    [
+     38,
+     541,
+     156
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.52,
+   "macro_f1": 0.5119,
+   "f1": {
+    "negative": 0.8429,
+    "neutral": 0.3053,
+    "positive": 0.3876
+   },
+   "confusion": [
+    [
+     59,
+     14,
+     0
+    ],
+    [
+     3,
+     20,
+     1
+    ],
+    [
+     5,
+     73,
+     25
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 1.0,
+    "text": "tempat nya nyaman . rasanya biasa saja . pelayanan nya sangat lama . makanan keluar pun lama padahal yang makan cuma kit",
+    "gold": "positive",
+    "pred": "negative"
+   },
+   {
+    "conf": 1.0,
+    "text": "karena ini restoran jaman belanda kabar nya sudah berdiri sejak tahun 1923 dan saya tidak pernah ke sini sebelumnya , ma",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "jika ke bandung , saya merasa belum lengkap jika tidak menikmati makanan di kedai nyonya rumah . dan entah mengapa , say",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "pertama kali ke sini , di jogja belum ada soal nya . ini juga karena diet pas lewat jalan braga . banyak pilihan menu ma",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "suasana dingin-dingin di bandung , paling enak kuliner nya ya makan makanan yang hangat-hangat . kalau ada sedang kecape",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "salah satu bubur ayam yang enak di bandung adalah bubur ayam hamid . yang saya suka adalah bubur ayam yang pakai ati amp",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "kami keliling cari makan di mal pvj dari jam 11 siang , tapi banyak resto yang belum siap . kata nya buka jam 12 an . ke",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "makanan di sini benar-benar tidak sesuai lidah saya dengan harga yang tidak setimpal sih menurut saya . cuma mungkin bis",
+    "gold": "positive",
+    "pred": "negative"
+   },
+   {
+    "conf": 1.0,
+    "text": "lotek dan petis tahu adalah favorit saya di sini . tapi yang terpopuler adalah nasi bakmoy - nya . selain itu ada juga a",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "kalau bukan karena pak jokowi , indonesia pasti sudah tidak ada bentuk nya , terima kasih , pak .",
+    "gold": "positive",
+    "pred": "negative"
+   }
+  ]
+ },
+ {
+  "model": "apriandito/indobert-sentiment-classifier",
+  "context": "generic",
+  "dataset": "nusax",
+  "contaminated": false,
+  "ms_per_item": 365.5,
+  "full": {
+   "n": 400,
+   "acc": 0.54,
+   "macro_f1": 0.4608,
+   "f1": {
+    "negative": 0.8789,
+    "neutral": 0.4903,
+    "positive": 0.0132
+   },
+   "confusion": [
+    [
+     127,
+     26,
+     0
+    ],
+    [
+     8,
+     88,
+     0
+    ],
+    [
+     1,
+     149,
+     1
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.545,
+   "macro_f1": 0.4634,
+   "f1": {
+    "negative": 0.8873,
+    "neutral": 0.5027,
+    "positive": 0.0
+   },
+   "confusion": [
+    [
+     63,
+     12,
+     0
+    ],
+    [
+     4,
+     46,
+     0
+    ],
+    [
+     0,
+     75,
+     0
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 1.0,
+    "text": "Rasa sotonya menurut saya pedas tapi gurih. Minum sirup markisa yang segar sama es lilinnya yang enak.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Lokasi dan arsitektur tempat ini oke banget, cuma kalau makanan dan minuman di sini tidak terlalu istimewa. Enak buat bu",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Ke sini waktu acara kantor. Ada live musik. Menu beragam. Cocok kalau pergi ramai-ramai tapi seleranya beda-beda. Ramenn",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Makanannya lumayan enak-enak di udara dingin dan banyak variasinya dari mulai restoran burangrang, saung purbasari dan a",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Saat jenuh dengan oleh oleh khas bandung yang sudah ada, maka roti bakar tunggal bisa menjadi pilihan. Saya sering beli ",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Sambil menunggu waktu pergantian tahun kita coba ke sini. Kita berdua pesan beberapa sushi. Minumannya milktea sama eskr",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Kalau ke sini saya selalu pesan singkong sambal roa. Singkongnya digoreng dipadankan dengan sambal roa, enak. Makanan ya",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Bubur Ahong ini enak dimakan saat makan malam. Banyak menu lainnya yang dapat dinikmati selain bubur. Rumah makan ini ra",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Malam sekitar jam tujuan diajak klien ke tempat makan ini, over all sih makanannya lebih banyak yang di goreng-goreng be",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Anw indomie pertama di 2018 ku semalam ternyata nikmat",
+    "gold": "positive",
+    "pred": "neutral"
+   }
+  ]
+ },
+ {
+  "model": "apriandito/indobert-sentiment-classifier",
+  "context": "review",
+  "dataset": "nusax",
+  "contaminated": false,
+  "ms_per_item": 388.3,
+  "full": {
+   "n": 400,
+   "acc": 0.63,
+   "macro_f1": 0.6126,
+   "f1": {
+    "negative": 0.8702,
+    "neutral": 0.5392,
+    "positive": 0.4286
+   },
+   "confusion": [
+    [
+     124,
+     29,
+     0
+    ],
+    [
+     7,
+     86,
+     3
+    ],
+    [
+     1,
+     108,
+     42
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.64,
+   "macro_f1": 0.6205,
+   "f1": {
+    "negative": 0.8936,
+    "neutral": 0.5556,
+    "positive": 0.4124
+   },
+   "confusion": [
+    [
+     63,
+     12,
+     0
+    ],
+    [
+     3,
+     45,
+     2
+    ],
+    [
+     0,
+     55,
+     20
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 1.0,
+    "text": "Rasa sotonya menurut saya pedas tapi gurih. Minum sirup markisa yang segar sama es lilinnya yang enak.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Makanannya lumayan enak-enak di udara dingin dan banyak variasinya dari mulai restoran burangrang, saung purbasari dan a",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Kalau ke sini saya selalu pesan singkong sambal roa. Singkongnya digoreng dipadankan dengan sambal roa, enak. Makanan ya",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Youtube banyak sekali manfaatnya. Bisa nonton film, dengar lagu, kadang untuk belajar.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Tempatnya nyaman dan berkesan adem. Satenya juga enak dan ada menu lainnya lagi di tempat ini, tidak hanya sate",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Agak menyesal dengan keputusan masuk jurusan film, ingin masuk seni rupa sebenarnya. Tapi ragu dengan bakat yang dimilik",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Salah satu menu favorit saya adalah mcflurry aneka rasa selain menu paket dengan dua ayam. Menurut saya, ayam mcd memili",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Ini adalah sop stengkel terenak di aceh tamiang.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Istri saya yang tidak terlalu suka ramen, untuk kali ini dia bilang enak dan gurih. Dia malah memesan lagi untuk dirinya",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Anw indomie pertama di 2018 ku semalam ternyata nikmat",
+    "gold": "positive",
+    "pred": "neutral"
+   }
+  ]
+ },
+ {
+  "model": "w11wo/indonesian-roberta-base-sentiment-classifier",
+  "context": "none",
+  "dataset": "smsa",
+  "contaminated": true,
+  "ms_per_item": 121.7,
+  "full": {
+   "n": 1260,
+   "acc": 0.9254,
+   "macro_f1": 0.8918,
+   "f1": {
+    "negative": 0.9146,
+    "neutral": 0.8093,
+    "positive": 0.9516
+   },
+   "confusion": [
+    [
+     364,
+     9,
+     21
+    ],
+    [
+     14,
+     104,
+     13
+    ],
+    [
+     24,
+     13,
+     698
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.93,
+   "macro_f1": 0.9062,
+   "f1": {
+    "negative": 0.9388,
+    "neutral": 0.8333,
+    "positive": 0.9463
+   },
+   "confusion": [
+    [
+     69,
+     2,
+     2
+    ],
+    [
+     1,
+     20,
+     3
+    ],
+    [
+     4,
+     2,
+     97
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 0.998,
+    "text": "nama restaurant nya bikin orang penasaran , tempat nya bagus . jauh dan macet nya bikin malas datang 2 x .",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.998,
+    "text": "soun claypot nya enak . udang nya besar-besar . salad ubar-ubar nya juga enak . suki nya banyak macam nya . saus nya ena",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.998,
+    "text": "padanan ayam dan keju cair cukup enak , karena memberi rasa kenyang , untuk hot chicken wings cukup enak . untuk pesta u",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.997,
+    "text": "pemandangan nya bagus tapi kalau mau ke sini baiknya reservasi dulu kalau mau dapat tempat yang bagus . makanan nya enak",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.997,
+    "text": "ketika sudah berada di atas , jangan lupa untuk melihat ke bawah ya sahabat bni :",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.997,
+    "text": "makanan nya gaenak . fish and chips porsi nya dikit banget , chicken wings encer banget jadi seperti makan sup ayam paka",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.997,
+    "text": "makanya saya minta bukti valid kebenaran nya apa iya harga bbm yang dijual pemerintah era say mahal mencekik masyarakat ",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.996,
+    "text": "jokowi tidak suka makan nasi",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.995,
+    "text": "tidak ngancem",
+    "gold": "positive",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.992,
+    "text": "mending sariayu acne cara , mantel",
+    "gold": "positive",
+    "pred": "neutral"
+   }
+  ]
+ },
+ {
+  "model": "w11wo/indonesian-roberta-base-sentiment-classifier",
+  "context": "none",
+  "dataset": "nusax",
+  "contaminated": true,
+  "ms_per_item": 121.9,
+  "full": {
+   "n": 400,
+   "acc": 0.9075,
+   "macro_f1": 0.8942,
+   "f1": {
+    "negative": 0.9377,
+    "neutral": 0.8214,
+    "positive": 0.9235
+   },
+   "confusion": [
+    [
+     143,
+     3,
+     7
+    ],
+    [
+     9,
+     69,
+     18
+    ],
+    [
+     0,
+     0,
+     151
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.89,
+   "macro_f1": 0.8728,
+   "f1": {
+    "negative": 0.9342,
+    "neutral": 0.7805,
+    "positive": 0.9036
+   },
+   "confusion": [
+    [
+     71,
+     0,
+     4
+    ],
+    [
+     6,
+     32,
+     12
+    ],
+    [
+     0,
+     0,
+     75
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 0.994,
+    "text": "Sate kambing H. Ihsan ini cukup terkenal di tegal. Apabila tidak bisa mengunjungi lokasi di pusatnya. Anda bisa juga men",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.991,
+    "text": "Akses menuju dusun bambu bisa ditempuh kira-kira dalam waktu 1 - 2 jam menggunakan mobil pribadi. Berkunjung ke dusun ba",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.987,
+    "text": "Nasi uduk ini ada di jalan rajiman dan bukanya dari sore sampai malam. Menunya sih cukup sederhana, hanya nasi uduk dan ",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.987,
+    "text": "Berbagai macam minuman segar tersedia mulai dari jus buah sampai aneka teh.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.98,
+    "text": "Hotel ini sudah berdiri sejak tiga puluh tahun yang lalu, sebelum saya lahir. Penginapan pertama di kota ini. Sekarang s",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.969,
+    "text": "Tidur yang cukup tiap harinya bisa bikin badan tidak kecapekan dan segar ketika bangun di pagi hari.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.961,
+    "text": "Di indonesia pilihan merek telepon seluler kan melimpah. Kalau tidak suka cara xiaomi menjalankan bisnisnya ya tinggal p",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.945,
+    "text": "Baru tahu tentang tempat ini dari teman, waktu kami datang pengunjungnya tidak terlalu banyak, jadi kami memilih untuk d",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.94,
+    "text": "Hasil quick count dinyatakan berbeda dengan hasil survei membuat saya bertanya-tanya.",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.933,
+    "text": "Tempatnya cukup unik, rasa makanan standar, menu yang ditawarkan juga biasa, hanya saja yang menarik tempat dan keunikan",
+    "gold": "neutral",
+    "pred": "positive"
+   }
+  ]
+ },
+ {
+  "model": "mdhugol/indonesia-bert-sentiment-classification",
+  "context": "none",
+  "dataset": "smsa",
+  "contaminated": true,
+  "ms_per_item": 134.1,
+  "full": {
+   "n": 1260,
+   "acc": 0.9381,
+   "macro_f1": 0.9119,
+   "f1": {
+    "negative": 0.9225,
+    "neutral": 0.8516,
+    "positive": 0.9617
+   },
+   "confusion": [
+    [
+     369,
+     7,
+     18
+    ],
+    [
+     15,
+     109,
+     7
+    ],
+    [
+     22,
+     9,
+     704
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.935,
+   "macro_f1": 0.9196,
+   "f1": {
+    "negative": 0.9333,
+    "neutral": 0.875,
+    "positive": 0.9505
+   },
+   "confusion": [
+    [
+     70,
+     1,
+     2
+    ],
+    [
+     2,
+     21,
+     1
+    ],
+    [
+     5,
+     2,
+     96
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 0.998,
+    "text": "makanan nya gaenak . fish and chips porsi nya dikit banget , chicken wings encer banget jadi seperti makan sup ayam paka",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.998,
+    "text": "padanan ayam dan keju cair cukup enak , karena memberi rasa kenyang , untuk hot chicken wings cukup enak . untuk pesta u",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.997,
+    "text": "ketika sudah berada di atas , jangan lupa untuk melihat ke bawah ya sahabat bni :",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.996,
+    "text": "makanya saya minta bukti valid kebenaran nya apa iya harga bbm yang dijual pemerintah era say mahal mencekik masyarakat ",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.995,
+    "text": "jokowi tidak suka makan nasi",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.991,
+    "text": "oh kena kira rasa indomie ayam bawang yang selalu dinikmati didi",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.99,
+    "text": "rasanya biasa saja manis dan terasa kurang bumbu nya . ada juga pilihan yang pedas . harga lumayan mahal secup kecil 40 ",
+    "gold": "positive",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.989,
+    "text": "tidak ada nya bantahan resmi dari demokrat ttg isu jokowi - ahy , banyak menimbulkan kerugian dikubu demokrat . jika ben",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.988,
+    "text": "mending sariayu acne cara , mantel",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.983,
+    "text": "tempat nya nyaman . rasanya biasa saja . pelayanan nya sangat lama . makanan keluar pun lama padahal yang makan cuma kit",
+    "gold": "positive",
+    "pred": "negative"
+   }
+  ]
+ },
+ {
+  "model": "mdhugol/indonesia-bert-sentiment-classification",
+  "context": "none",
+  "dataset": "nusax",
+  "contaminated": true,
+  "ms_per_item": 112.7,
+  "full": {
+   "n": 400,
+   "acc": 0.96,
+   "macro_f1": 0.9546,
+   "f1": {
+    "negative": 0.9801,
+    "neutral": 0.9189,
+    "positive": 0.9649
+   },
+   "confusion": [
+    [
+     148,
+     4,
+     1
+    ],
+    [
+     1,
+     85,
+     10
+    ],
+    [
+     0,
+     0,
+     151
+    ]
+   ]
+  },
+  "subset": {
+   "n": 200,
+   "acc": 0.955,
+   "macro_f1": 0.9501,
+   "f1": {
+    "negative": 0.9799,
+    "neutral": 0.9149,
+    "positive": 0.9554
+   },
+   "confusion": [
+    [
+     73,
+     1,
+     1
+    ],
+    [
+     1,
+     43,
+     6
+    ],
+    [
+     0,
+     0,
+     75
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 0.997,
+    "text": "Saya sudah registrasi tapi tidak dapat sms dari 5111.",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.995,
+    "text": "Sate kambing H. Ihsan ini cukup terkenal di tegal. Apabila tidak bisa mengunjungi lokasi di pusatnya. Anda bisa juga men",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.995,
+    "text": "Nasi uduk ini ada di jalan rajiman dan bukanya dari sore sampai malam. Menunya sih cukup sederhana, hanya nasi uduk dan ",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.994,
+    "text": "Hasil quick count dinyatakan berbeda dengan hasil survei membuat saya bertanya-tanya.",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.992,
+    "text": "Tidur yang cukup tiap harinya bisa bikin badan tidak kecapekan dan segar ketika bangun di pagi hari.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.992,
+    "text": "Akses menuju dusun bambu bisa ditempuh kira-kira dalam waktu 1 - 2 jam menggunakan mobil pribadi. Berkunjung ke dusun ba",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.988,
+    "text": "Minimal biaya transaksi bulan 11 yang harusnya direfund bulan 12 kemarin tidak masuk ke rekening saya nih.",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.984,
+    "text": "Saya melakukan 5 transaksi pada tanggal 22 juni, smuanya decline nyatanya terdebit dari rekening hampir 7 juta, dari 5 t",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.953,
+    "text": "Sejak buka cendana bistro saya sudah coba makanan, untuk saya kurang cocok, makanannya biasa-biasa tidak ada yang spesia",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.948,
+    "text": "Jangan lewatkan diskon langsung hingga Rp 10 juta di sini!",
+    "gold": "neutral",
+    "pred": "positive"
+   }
+  ]
+ },
+ {
+  "model": "apriandito/indobert-sentiment-classifier",
+  "context": "generic",
+  "dataset": "nusax_clean",
+  "contaminated": false,
+  "ms_per_item": 344.1,
+  "full": {
+   "n": 81,
+   "acc": 0.6173,
+   "macro_f1": 0.5031,
+   "f1": {
+    "negative": 0.8065,
+    "neutral": 0.6076,
+    "positive": 0.0952
+   },
+   "confusion": [
+    [
+     25,
+     9,
+     0
+    ],
+    [
+     3,
+     24,
+     0
+    ],
+    [
+     0,
+     19,
+     1
+    ]
+   ]
+  },
+  "subset": {
+   "n": 81,
+   "acc": 0.6173,
+   "macro_f1": 0.5031,
+   "f1": {
+    "negative": 0.8065,
+    "neutral": 0.6076,
+    "positive": 0.0952
+   },
+   "confusion": [
+    [
+     25,
+     9,
+     0
+    ],
+    [
+     3,
+     24,
+     0
+    ],
+    [
+     0,
+     19,
+     1
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 1.0,
+    "text": "Rasa sotonya menurut saya pedas tapi gurih. Minum sirup markisa yang segar sama es lilinnya yang enak.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Makanan di sini sama seperti kfc lainnya. Ayam gorengnya crispy, gurih dan enak",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Bebeknya enak, lembut, sambelnya enak. Tempat bersih dan lumayan oke.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Rasanya hampir sama dengan resto yang lain yang jualan seafood. Aman bersih dan pelayanannya cepat.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Kami mengunjungi tempat ini karena lokasinya yang berdekatan dengan tempat kami menginap. Kami memesan nasi bakar dan pa",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Tempat nyaman dan enak, kadang dijadikan tempat foto pre-wedding",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Rasa makanan biasa saja dan suasana tidak istimewa sehingga sekali kedatangan sudah cukup.",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Baru saja tadi sampai barangnya, bagus kok",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Nasi rawonnya sangat enak, harga terjangkau. Dekat universitas parahyangan. Tempatnya unik dengan kayu-kayu.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Sate kambing dan gulai kambingnya maknyus, penyajian makanannya juga sangat cepat. Tempatnya cukup bersih",
+    "gold": "positive",
+    "pred": "neutral"
+   }
+  ]
+ },
+ {
+  "model": "apriandito/indobert-sentiment-classifier",
+  "context": "review",
+  "dataset": "nusax_clean",
+  "contaminated": false,
+  "ms_per_item": 303.1,
+  "full": {
+   "n": 81,
+   "acc": 0.679,
+   "macro_f1": 0.6389,
+   "f1": {
+    "negative": 0.8065,
+    "neutral": 0.6486,
+    "positive": 0.4615
+   },
+   "confusion": [
+    [
+     25,
+     9,
+     0
+    ],
+    [
+     3,
+     24,
+     0
+    ],
+    [
+     0,
+     14,
+     6
+    ]
+   ]
+  },
+  "subset": {
+   "n": 81,
+   "acc": 0.679,
+   "macro_f1": 0.6389,
+   "f1": {
+    "negative": 0.8065,
+    "neutral": 0.6486,
+    "positive": 0.4615
+   },
+   "confusion": [
+    [
+     25,
+     9,
+     0
+    ],
+    [
+     3,
+     24,
+     0
+    ],
+    [
+     0,
+     14,
+     6
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 1.0,
+    "text": "Rasa sotonya menurut saya pedas tapi gurih. Minum sirup markisa yang segar sama es lilinnya yang enak.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Youtube banyak sekali manfaatnya. Bisa nonton film, dengar lagu, kadang untuk belajar.",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Agak menyesal dengan keputusan masuk jurusan film, ingin masuk seni rupa sebenarnya. Tapi ragu dengan bakat yang dimilik",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Makanan di sini sama seperti kfc lainnya. Ayam gorengnya crispy, gurih dan enak",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 1.0,
+    "text": "Telepon genggamnya eror pas pertama dinyalakan",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.999,
+    "text": "Gunakan kunci duplikat, bank bri di pusat kota dibobol maling, uang rp 1 miliar lenyap.",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.999,
+    "text": "Macet di mana-mana kalau lagi liburan",
+    "gold": "negative",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.999,
+    "text": "Restoran ini sangat romantis dengan pemandangannya yang sangat indah di malam hari",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.999,
+    "text": "Adikku sangat suka brownis primarasa",
+    "gold": "positive",
+    "pred": "neutral"
+   },
+   {
+    "conf": 0.999,
+    "text": "Sate kambing dan gulai kambingnya maknyus, penyajian makanannya juga sangat cepat. Tempatnya cukup bersih",
+    "gold": "positive",
+    "pred": "neutral"
+   }
+  ]
+ },
+ {
+  "model": "w11wo/indonesian-roberta-base-sentiment-classifier",
+  "context": "none",
+  "dataset": "nusax_clean",
+  "contaminated": false,
+  "ms_per_item": 72.9,
+  "full": {
+   "n": 81,
+   "acc": 0.8642,
+   "macro_f1": 0.8511,
+   "f1": {
+    "negative": 0.9296,
+    "neutral": 0.7727,
+    "positive": 0.8511
+   },
+   "confusion": [
+    [
+     33,
+     0,
+     1
+    ],
+    [
+     4,
+     17,
+     6
+    ],
+    [
+     0,
+     0,
+     20
+    ]
+   ]
+  },
+  "subset": {
+   "n": 81,
+   "acc": 0.8642,
+   "macro_f1": 0.8511,
+   "f1": {
+    "negative": 0.9296,
+    "neutral": 0.7727,
+    "positive": 0.8511
+   },
+   "confusion": [
+    [
+     33,
+     0,
+     1
+    ],
+    [
+     4,
+     17,
+     6
+    ],
+    [
+     0,
+     0,
+     20
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 0.994,
+    "text": "Sate kambing H. Ihsan ini cukup terkenal di tegal. Apabila tidak bisa mengunjungi lokasi di pusatnya. Anda bisa juga men",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.987,
+    "text": "Berbagai macam minuman segar tersedia mulai dari jus buah sampai aneka teh.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.98,
+    "text": "Hotel ini sudah berdiri sejak tiga puluh tahun yang lalu, sebelum saya lahir. Penginapan pertama di kota ini. Sekarang s",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.969,
+    "text": "Tidur yang cukup tiap harinya bisa bikin badan tidak kecapekan dan segar ketika bangun di pagi hari.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.961,
+    "text": "Di indonesia pilihan merek telepon seluler kan melimpah. Kalau tidak suka cara xiaomi menjalankan bisnisnya ya tinggal p",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.784,
+    "text": "Iya benar, dia sedang jaga warung.",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.7,
+    "text": "Itu indomie sama mangkoknya sudah berkeliaran, terpisah pula isi sama wadahnya.",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.688,
+    "text": "Restoran seafood. Menu spesialnyanya kepiting yang dimakan dengan kulitnya. Untuk saya kurang enak. Kulitnya masih agak ",
+    "gold": "negative",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.586,
+    "text": "Kemampuan memahami bacaan tiap orang itu beda-beda, ada yang sekali baca sudah paham, ada juga yang butuh berkali-kali b",
+    "gold": "neutral",
+    "pred": "negative"
+   },
+   {
+    "conf": 0.534,
+    "text": "Sebuah musibah baru saja menimpa kampung adat di bajawa, flores. Kebakaran hebat yang terjadi pada senin 13 / 8 sore ham",
+    "gold": "neutral",
+    "pred": "negative"
+   }
+  ]
+ },
+ {
+  "model": "mdhugol/indonesia-bert-sentiment-classification",
+  "context": "none",
+  "dataset": "nusax_clean",
+  "contaminated": false,
+  "ms_per_item": 72.5,
+  "full": {
+   "n": 81,
+   "acc": 0.9383,
+   "macro_f1": 0.9289,
+   "f1": {
+    "negative": 1.0,
+    "neutral": 0.898,
+    "positive": 0.8889
+   },
+   "confusion": [
+    [
+     34,
+     0,
+     0
+    ],
+    [
+     0,
+     22,
+     5
+    ],
+    [
+     0,
+     0,
+     20
+    ]
+   ]
+  },
+  "subset": {
+   "n": 81,
+   "acc": 0.9383,
+   "macro_f1": 0.9289,
+   "f1": {
+    "negative": 1.0,
+    "neutral": 0.898,
+    "positive": 0.8889
+   },
+   "confusion": [
+    [
+     34,
+     0,
+     0
+    ],
+    [
+     0,
+     22,
+     5
+    ],
+    [
+     0,
+     0,
+     20
+    ]
+   ]
+  },
+  "worst_errors": [
+   {
+    "conf": 0.995,
+    "text": "Sate kambing H. Ihsan ini cukup terkenal di tegal. Apabila tidak bisa mengunjungi lokasi di pusatnya. Anda bisa juga men",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.992,
+    "text": "Tidur yang cukup tiap harinya bisa bikin badan tidak kecapekan dan segar ketika bangun di pagi hari.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.934,
+    "text": "Berbagai macam minuman segar tersedia mulai dari jus buah sampai aneka teh.",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.925,
+    "text": "Hotel ini sudah berdiri sejak tiga puluh tahun yang lalu, sebelum saya lahir. Penginapan pertama di kota ini. Sekarang s",
+    "gold": "neutral",
+    "pred": "positive"
+   },
+   {
+    "conf": 0.893,
+    "text": "Di indonesia pilihan merek telepon seluler kan melimpah. Kalau tidak suka cara xiaomi menjalankan bisnisnya ya tinggal p",
+    "gold": "neutral",
+    "pred": "positive"
+   }
+  ]
+ }
+]

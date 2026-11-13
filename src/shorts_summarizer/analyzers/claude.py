@@ -50,6 +50,21 @@ downstream fact-checking step. Rules:
 Timestamps are seconds."""
 
 
+LANG_NAMES = {"id": "Bahasa Indonesia", "en": "English"}
+
+
+def language_rules(lang: str) -> str:
+    name = LANG_NAMES.get(lang, lang)
+    return f"""
+
+OUTPUT LANGUAGE: {name}.
+- Write every free-text field in {name}: summary, topics, description, people, claim text,
+  entities' descriptive words, sentiment emotions, call_to_action, target_groups.
+- Do NOT translate: enum values (kind, technique, polarity, overall, modality), risk_flags
+  (keep them English snake_case), proper names, and anything quoted as evidence.
+- evidence_quote and missed_text must stay verbatim in the language they appear in the video."""
+
+
 def _img_block(path: str) -> dict:
     data = base64.standard_b64encode(Path(path).read_bytes()).decode()
     return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": data}}
@@ -81,8 +96,9 @@ class RefusalError(RuntimeError):
 
 
 class ClaudeAnalyzer:
-    def __init__(self, model: str | None = None):
+    def __init__(self, model: str | None = None, lang: str = "id"):
         self.model = model or os.getenv("SHORTS_MODEL", DEFAULT_MODEL)
+        self.lang = lang
         self.client = anthropic.Anthropic()
 
     def _parse(self, system: str, content: list[dict], output_format):
@@ -109,10 +125,10 @@ class ClaudeAnalyzer:
         content.append({"type": "text", "text":
                         f"TRANSCRIPT:\n{_fmt_transcript(ev)}\n\nOCR TEXT:\n{_fmt_ocr(ev)}\n\n"
                         f"Describe all {len(ev.frames)} frames."})
-        return self._parse(DESCRIBE_SYSTEM, content, VisualPass)
+        return self._parse(DESCRIBE_SYSTEM + language_rules(self.lang), content, VisualPass)
 
     def analyze(self, ev: Evidence, visuals: VisualPass) -> Analysis:
         vis = "\n".join(f"[{v.t:.1f}s] ({v.kind}) {v.description}" for v in visuals.frames)
         text = (f"METADATA:\n{_fmt_meta(ev)}\n\nTRANSCRIPT:\n{_fmt_transcript(ev)}\n\n"
                 f"ON-SCREEN TEXT (OCR):\n{_fmt_ocr(ev)}\n\nVISUALS:\n{vis}")
-        return self._parse(ANALYZE_SYSTEM, [{"type": "text", "text": text}], Analysis)
+        return self._parse(ANALYZE_SYSTEM + language_rules(self.lang), [{"type": "text", "text": text}], Analysis)
